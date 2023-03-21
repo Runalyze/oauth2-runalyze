@@ -33,7 +33,7 @@ class Runalyze extends AbstractProvider
      */
     public function getResourceOwnerDetailsUrl(AccessToken $token): string
     {
-        return 'https://runalyze.com/user/profile?' . http_build_query(['access_token' => $token->getToken()]);
+        return 'https://runalyze.com/api/v1/athlete/extended';
     }
 
     /**
@@ -42,7 +42,7 @@ class Runalyze extends AbstractProvider
     protected function getDefaultScopes(): array
     {
         return [
-            'profile'
+            'athlete_extended'
         ];
     }
 

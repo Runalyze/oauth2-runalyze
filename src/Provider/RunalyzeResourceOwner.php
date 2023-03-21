@@ -22,7 +22,7 @@ class RunalyzeResourceOwner implements ResourceOwnerInterface
      */
     public function getId(): mixed
     {
-        return $this->getValueByKey($this->response, 'user_id');
+        return $this->getValueByKey($this->response, 'id');
     }
 
     /**
@@ -30,7 +30,7 @@ class RunalyzeResourceOwner implements ResourceOwnerInterface
      */
     public function getEmail(): ?string
     {
-        return $this->getValueByKey($this->response, 'email');
+        return $this->getValueByKey($this->response, 'mail');
     }
 
     /**
@@ -38,7 +38,7 @@ class RunalyzeResourceOwner implements ResourceOwnerInterface
      */
     public function getName(): ?string
     {
-        return $this->getValueByKey($this->response, 'name');
+        return $this->getValueByKey($this->response, 'username');
     }
 
     /**
